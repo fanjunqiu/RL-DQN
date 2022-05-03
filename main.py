@@ -1,13 +1,12 @@
 import random
 import gym
 import numpy as np
-import collections
 from tqdm import tqdm
 import torch
 import matplotlib.pyplot as plt
 import rl_utils
-from buffer import ReplayBuffer
 from DQN import DQN
+from rl_utils import ReplayBuffer
 
 lr = 2e-3
 num_episodes = 500
@@ -73,6 +72,7 @@ for i in range(10):
             pbar.update(1)
 
 
+
 # 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
     episodes_list = list(range(len(return_list)))
@@ -88,4 +88,3 @@ if __name__ == '__main__':
     plt.ylabel('Returns')
     plt.title('DQN on {}'.format(env_name))
     plt.show()
-
